@@ -1,0 +1,3 @@
+{
+  "NOTE": "Save state has been moved to .game/progress.json to segregate game state from workspace files."
+}
