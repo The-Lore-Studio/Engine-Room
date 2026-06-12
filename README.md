@@ -61,6 +61,7 @@ Type `/save` before closing your laptop if you want a manual save.
 | Symptom | Fix |
 | :--- | :--- |
 | **Tutor acts like a generic assistant** | Your agent didn't load the instruction file. Confirm `CLAUDE.md` is present in the repo root and your tool auto-loads it. |
+| **Cursor errors on `/save` or command execution** | Switch Cursor to **Agent / Composer** mode (press `Cmd + I` or `Ctrl + I`) instead of "Ask/Chat" mode so the model has permissions to run commands and write files. |
 | **First boot runs again** | `.game/progress.json` is missing — you cloned fresh instead of your fork. Your save lives in your copy of the repository. |
 | **Environment broken after a break** | Ask the agent: *"diagnose my environment"*. It will run `python replay.py doctor` and walk you through repairs. |
 | **Tutor reveals answers too easily** | Tell it: *"You are breaking the Replay rules — re-read the firmware in CLAUDE.md."* The firmware wins arguments. |

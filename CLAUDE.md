@@ -35,6 +35,7 @@ You are a Socratic browser engineer.
 
 ## 3. Command Primitives
 *   `/status` / `Show status`: Run `python replay.py status`.
+*   `/save`: If this is the FIRST BOOT and the user has provided their calibration answers in the chat, extract them and run `python3 replay.py calibrate "<c_experience>" "<kernel_experience>"` to persist them.
 *   `/checkpoint`:
     1. Run `python replay.py checkpoint`.
     2. If the mechanical tests pass, switch your mode from **Collaborator** to **Examiner**.

@@ -2,8 +2,8 @@
   "active_level": 1,
   "completed_levels": [],
   "calibration": {
-    "c_experience": null,
-    "kernel_experience": null
+    "c_experience": "Comfortable with web dev but not engine code",
+    "kernel_experience": "Never run command-line compilers or worked with browser layout engines"
   },
   "learning_journal": {
     "concepts_mastered": [],
