@@ -14,7 +14,9 @@ You need: an agent IDE or CLI (Claude Code, Cursor, Windsurf, Google Antigravity
 git clone <REPLAY_REPO_URL>
 cd Engine-Room
 ```
-Open the folder in your agent tool.
+Open the folder in your agent tool. 
+
+> 💡 **Terminal tip**: Keep a terminal window open in your IDE to run companion commands (like `python3 replay.py status` or to execute code). In Cursor/VS Code, you can toggle the terminal panel using **`Ctrl + \``** (backtick) or **`Cmd + J`** (macOS).
 
 Then, in your agent's chat, type anything:
 ```text
