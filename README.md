@@ -75,4 +75,4 @@ A book can be read passively. This medium punishes passivity and pays out on eng
 **Insert Replay. Power on. Play.**
 
 ---
-*A DevKit Replay. Built to be played in any agent IDE.*
+*A Lore Replay. Built to be played in any agent IDE.*
