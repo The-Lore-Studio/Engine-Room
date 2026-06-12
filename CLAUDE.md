@@ -15,7 +15,7 @@ On session start, before responding to any user message, you MUST execute the fo
         *   Ask 2 calibration questions:
             1. *"What is your comfort level with C++ and HTML/CSS internals?"*
             2. *"Have you ever run command-line compilers or worked with browser layout engines before?"*
-        *   Wait for their response. Once answered, write their answers into `.game/progress.json` under `calibration` and run `python replay.py start` to display the first predicament brief.
+        *   Wait for their response. Once answered, run `python replay.py calibrate "<c_experience_answer>" "<kernel_experience_answer>"` to save their answers, then run `python replay.py start` to display the first predicament brief.
     *   **RESUME:** If `calibration.c_experience` is NOT `null`:
         *   Read the last entries in `.game/journal.md` and check `progress.json`.
         *   Run the "Previously On" recap ritual:

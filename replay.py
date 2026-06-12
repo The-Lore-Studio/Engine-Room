@@ -175,9 +175,16 @@ def pass_level():
     else:
         print(f"No logic defined to pass Level {level} in this prototype.")
 
+def calibrate(c_exp, kernel_exp):
+    state = load_state()
+    state['calibration']['c_experience'] = c_exp
+    state['calibration']['kernel_experience'] = kernel_exp
+    save_state(state)
+    print(f"[CALIBRATION] Saved: C++={c_exp}, Kernel={kernel_exp}")
+
 if __name__ == '__main__':
     if len(sys.argv) < 2:
-        print("Usage: python replay.py [status|start|checkpoint|pass_level|doctor]")
+        print("Usage: python replay.py [status|start|checkpoint|pass_level|doctor|calibrate]")
         sys.exit(1)
         
     cmd = sys.argv[1]
@@ -191,6 +198,11 @@ if __name__ == '__main__':
         pass_level()
     elif cmd == 'doctor':
         doctor()
+    elif cmd == 'calibrate':
+        if len(sys.argv) < 4:
+            print("Usage: python replay.py calibrate [c_experience] [kernel_experience]")
+            sys.exit(1)
+        calibrate(sys.argv[2], sys.argv[3])
     else:
         print(f"Unknown command: {cmd}")
         sys.exit(1)
