@@ -12,9 +12,9 @@ You need: an agent IDE or CLI (Claude Code, Cursor, Windsurf, Google Antigravity
 
 ```bash
 git clone <REPLAY_REPO_URL>
-cd browser-engine-replay
+cd Engine-Room
 ```
-Open the folder in your agent tool. Accept the dev container prompt if present (first build takes a few minutes — that's your lab assembling).
+Open the folder in your agent tool.
 
 Then, in your agent's chat, type anything:
 ```text
