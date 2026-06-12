@@ -20,7 +20,7 @@ Then, in your agent's chat, type anything:
 ```text
 hi
 ```
-That's it. The tutor detects there's no save file, verifies your environment (running `python replay.py doctor`), asks a couple of calibration questions, and drops you into Unit 1. The setup guide is the first conversation.
+That's it. The tutor detects there's no save file, automatically verifies your environment, asks a couple of calibration questions, and drops you into Unit 1. The setup guide is the first conversation.
 
 Coming back later? Open the repo and type:
 ```text
