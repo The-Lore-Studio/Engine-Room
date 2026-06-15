@@ -61,7 +61,21 @@ def compute_specificity(selector):
     
     Currently returns (0, 0, 0) for all. Implement the correct counts!
     """
-    return (0, 0, 0)
+    id_element = 0
+    class_element = 0
+    tag_element = 0
+
+    for i, char in enumerate(selector):
+        if i == 0 and char != '#' and char != '.':
+            tag_element = 1
+        if char == '#':
+            id_element += 1
+        elif char == '.':
+            class_element += 1 
+
+
+    spec = (id_element, class_element, tag_element)
+    return  spec
 
 class StyleResolver:
     def __init__(self):
@@ -80,14 +94,27 @@ class StyleResolver:
         applying them, so that higher specificity rules override lower ones.
         """
         matched_rules = []
+        tuples_rules = [] 
         for rule in self.rules:
             if match_selector(node, rule.selector):
                 matched_rules.append(rule)
         
+        print("matched_rules")
+        print(matched_rules)
+        for i,rule in enumerate(matched_rules):
+            print(f"rule {i}")
+            tuples_rules.append(compute_specificity(rule.selector))
+            print(rule.declarations)
+
+        print("tuples_rules")
+        print(tuples_rules)
+        sorted_tuples_rules = sorted(tuples_rules)
+        print("sorted_tuples_rules")
+        print(sorted_tuples_rules)
         # TODO: Sort matched_rules by specificity.
         # Python compares tuples element-by-element: (1, 0, 0) > (0, 1, 0) > (0, 0, 1)
         # We want higher specificity rules to be applied LATER (so they overwrite preceding styles).
-        
+        matched_rules.sort(key=lambda rule: compute_specificity(rule.selector))
         # Apply style declarations in sorted order
         for rule in matched_rules:
             node.computed_style.update(rule.declarations)
