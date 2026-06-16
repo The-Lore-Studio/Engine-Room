@@ -35,6 +35,8 @@ You are a Socratic browser engineer.
 
 ## 3. Command Primitives
 *   `/status` / `Show status`: Run `python replay.py status`.
+*   `/map` / `Show map`: Run `python3 replay.py map`. In chat responses, also render the rich graphical Mermaid flowcharts (rendering pipeline and multi-process architecture) so they display visually in the chat UI, and remind the user that they can ask for additional resources, references, or deep-dives on any of the concepts shown.
+*   `/resources [concept]` / `Show resources [concept]`: Run `python3 replay.py resources [concept]`.
 *   `/save`: If this is the FIRST BOOT and the user has provided their calibration answers in the chat, extract them and run `python3 replay.py calibrate "<c_experience>" "<kernel_experience>"` to persist them.
 *   `/checkpoint`:
     1. Run `python replay.py checkpoint`.

@@ -32,6 +32,22 @@ You'll get a twenty-second recap and land back in your predicament.
 
 ---
 
+## Commands & Primitives
+
+You can execute these commands either by running them in your **terminal** or typing their equivalent in the **agent chat**:
+
+| Terminal Command | Chat Equivalent | Description |
+| :--- | :--- | :--- |
+| `python3 replay.py start` | `/start` or `Show brief` | Read the predicament brief for your active level |
+| `python3 replay.py map` | `/map` or `Show map` | Display the visual sub-system map & Chromium reference |
+| `python3 replay.py status` | `/status` or `Show status` | View your completion state and mastered concepts |
+| `python3 replay.py checkpoint` | `/checkpoint` | Run mechanical verification tests to trigger your oral exam |
+| `python3 replay.py resources [concept]` | `/resources [concept]` | Fetch specifications, references, and Chromium source files for a concept |
+| `python3 replay.py doctor` | `/doctor` | Run diagnostics on your local game environment |
+| `python3 replay.py pass_level` | `/pass_level` | Unlock the next level after passing oral examination |
+
+---
+
 ## How It Plays
 
 *   **Predicaments, not lessons.** Each unit opens with a situation: something is broken, missing, or mysterious in a real browser engine codebase. Your job is to get unstuck. The tutor will explain anything, go down any rabbit hole, and demand predictions before giving explanations — but it will not hand you the diagnosis. Being wrong out loud is the core mechanic.
@@ -39,6 +55,14 @@ You'll get a twenty-second recap and land back in your predicament.
 *   **Checkpoints are showdowns.** Talking fluently about CSS specificity is not the same as understanding it. A checkpoint is where your understanding meets something that can't be talked into agreeing with you. Passing one unlocks the next unit and writes a save commit to your log (`checkpoint: level-01 CSS specificity cascade resolved`).
 *   **The final showdown is real.** The Replay ends with an actual CL submitted to Chromium's Gerrit, reviewed by an actual Chromium reviewer. No test suite to game, no AI to shortcut it. What you walk away with is an artifact trail — commits, diffs, writeups, and a landed change — that lives in your fork and is yours.
 *   **Stuck?** Type `/hint` for the smallest Socratic nudge that gets you moving. Frustration is the game working; despair is not — the hints are graduated for a reason.
+
+---
+
+## Reference & Learning Materials
+
+*   [Chromium Engine Architecture & Subsystems](file:///Users/sergiorojas/Desktop/Engine-Room/context/chromium_architecture.md): Deep-dive into Chromium's process models, layered dependency directory structure (base, mojo, services, content, components, chrome), and its 11 major subsystems.
+*   [Chromium Gamepad API & System Architecture](file:///Users/sergiorojas/Desktop/Engine-Room/context/gamepad_system.md): Grounding guide to help you understand how Chromium hooks up to controllers, the shared memory design, and the platform refactoring required for Issue 40275102.
+*   **Ask for Resources**: Whenever you start a new challenge or unlock a new level, remember that you can ask the Socratic tutor in the chat for additional resources, references, or deep-dives into any browser engine or Chromium concepts introduced on the map.
 
 ---
 
